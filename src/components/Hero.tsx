@@ -73,9 +73,9 @@ export default function Hero() {
             <div className="text-white/60 text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] uppercase leading-[1.3] mt-2" {...i18nProps('stat_questions')} />
           </motion.div>
           <motion.div className="stat-box" variants={statItem} transition={instant}>
-            <div className="text-white text-[24px] sm:text-[36px] font-extrabold tracking-[-0.02em] leading-none">120</div>
+            <div className="text-white text-[24px] sm:text-[36px] font-extrabold tracking-[-0.02em] leading-none" {...i18nProps('stat_time')}/>
             <div className="w-6 h-[3px] bg-red rounded-full mx-auto mt-2" aria-hidden="true" />
-            <div className="text-white/60 text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] uppercase leading-[1.3] mt-2" {...i18nProps('stat_minutes')} />
+            <div className="text-white/60 text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] uppercase leading-[1.3] mt-2" {...i18nProps('stat_time_text')} />
           </motion.div>
         </motion.div>
       </div>
