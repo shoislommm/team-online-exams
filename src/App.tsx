@@ -6,7 +6,6 @@ import { AppProvider } from "./store/app";
 export default function App() {
   useEffect(() => {
     const sendHeight = () => {
-      console.log("SEND HEIGHT:", document.documentElement.offsetHeight);
 
       window.parent.postMessage(
         {

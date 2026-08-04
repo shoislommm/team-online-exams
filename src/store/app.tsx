@@ -172,14 +172,14 @@ function saveStudentRecord(
   localStorage.setItem("team_exam_registrations", JSON.stringify(r));
 }
 
-function enterFullscreen(): void {
-  const e = document.documentElement as HTMLElement & {
-    webkitRequestFullscreen?: () => void;
-    msRequestFullscreen?: () => void;
-  };
-  if (e.requestFullscreen) void e.requestFullscreen();
-  else if (e.webkitRequestFullscreen) e.webkitRequestFullscreen();
-  else if (e.msRequestFullscreen) e.msRequestFullscreen();
+async function enterFullscreen() {
+  try {
+    if (document.fullscreenElement) return;
+
+    await document.documentElement.requestFullscreen();
+  } catch (err) {
+    console.warn("Fullscreen is unavailable:", err);
+  }
 }
 
 export function AppProvider({ children }: { children: ReactNode }) {
