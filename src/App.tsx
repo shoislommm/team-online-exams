@@ -6,6 +6,8 @@ import { AppProvider } from "./store/app";
 export default function App() {
   useEffect(() => {
     const sendHeight = () => {
+      console.log("SEND HEIGHT:", document.documentElement.offsetHeight);
+
       window.parent.postMessage(
         {
           type: "iframe-height",
@@ -18,6 +20,8 @@ export default function App() {
     sendHeight();
 
     const observer = new ResizeObserver(sendHeight);
+
+    observer.observe(document.documentElement);
     observer.observe(document.body);
 
     window.addEventListener("resize", sendHeight);
