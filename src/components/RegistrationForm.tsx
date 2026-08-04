@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { i18nProps, i18nPhProps } from "@/i18n";
@@ -88,7 +88,7 @@ export default function RegistrationForm() {
   } = useApp();
   const reduceMotion = useReducedMotion();
   const today = getTodayString();
-  const [phoneValue, setPhoneValue] = useState<string | undefined>();
+  // const [phoneValue, setPhoneValue] = useState<string | undefined>();
 
   /* past dates (before today) are disabled: not clickable, not selectable, badged */
   function isPast(d: string): boolean {
