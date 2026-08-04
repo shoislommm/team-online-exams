@@ -176,7 +176,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<AnswersMap>({});
   const [flags, setFlags] = useState<FlagsMap>({});
-  const [timeLeft, setTimeLeft] = useState(6294);
+  const [timeLeft, setTimeLeft] = useState(6300);
   const [examRunning, setExamRunning] = useState(false);
   const [selectedWord, setSelectedWord] = useState<number | null>(null);
   const [wordBankPlacements, setWordBankPlacements] = useState<PlacementsMap>({});
@@ -244,7 +244,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   /* ================ registration ================ */
   function selectDate(d: string): void {
     /* past exam dates are not selectable */
-    if (d !== 'TEST' && d < getTodayString()) return;
+    if (d !== 'NOW' && d < getTodayString()) return;
     setSelectedExamDate(d);
   }
 
@@ -267,7 +267,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setStudentEmail(em || '');
     if (hasAttemptedExam(n, p)) { showPage('already-taken-page'); return; }
     saveStudentRecord(n, p, d, selectedExamType);
-    if (d === 'TEST') { startExamNow(selectedExamType === 'mathematics' ? 'math' : 'english'); return; }
+    if (d === 'NOW') { startExamNow(selectedExamType === 'mathematics' ? 'math' : 'english'); return; }
     if (d !== getTodayString()) { showWaitingPage(d); return; }
     startExamNow(selectedExamType === 'mathematics' ? 'math' : 'english');
   }
@@ -285,7 +285,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setCurrentQuestion(0);
     setAnswers({});
     setFlags({});
-    setTimeLeft(6294);
+    setTimeLeft(6300);
     setSelectedWord(null);
     setWordBankPlacements({});
     setWritingAnswers({});

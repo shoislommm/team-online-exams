@@ -92,7 +92,7 @@ export default function RegistrationForm() {
 
   /* past dates (before today) are disabled: not clickable, not selectable, badged */
   function isPast(d: string): boolean {
-    return d !== "TEST" && d < today;
+    return d !== "NOW" && d < today;
   }
 
   function dateCardClass(d: string, base: string): string {
@@ -227,13 +227,13 @@ export default function RegistrationForm() {
               className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 mt-3"
             >
               <div
-                className={dateCardClass("TEST", "date-card test-card")}
-                data-date="TEST"
+                className={dateCardClass("NOW", "date-card test-card")}
+                data-date="NOW"
                 onClick={function () {
-                  selectDate("TEST");
+                  selectDate("NOW");
                 }}
               >
-                <span className="test-badge">TEST</span>
+                <span className="test-badge">NOW</span>
                 <CardCheck />
                 <div
                   className="text-xs text-gray-400 font-medium uppercase tracking-wider"

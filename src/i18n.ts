@@ -188,7 +188,7 @@ export const I18N: Record<LangCode, Record<string, string>> = {
     label_dates: "Mavjud imtihon sanalari",
     label_dates_sub: "O'zingizga qulay imtihon sanasini tanlang",
     date_today: "BUGUN",
-    date_try_now: "Hozir sinang",
+    date_try_now: "Hozir sinab ko'ring",
     date_immediate: "Darhol kirish",
     date_open_doors: "Ochiq eshiklar + Imtihonlar",
     date_exams_day: "Imtihon kuni",

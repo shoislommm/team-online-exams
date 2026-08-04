@@ -65,10 +65,10 @@ export interface Section {
 
 export const EXAM_DATES: ExamDate[] = [
   {
-    date: "TEST",
-    label: "Test Today",
-    label_uz: "Bugungi sinov",
-    label_ru: "Тест сегодня",
+    date: "Now",
+    label: "Try Today",
+    label_uz: "Bugun sinab ko'ring",
+    label_ru: "Попробуйте сегодня",
     subtitle: "Immediate Access",
     subtitle_uz: "Darhol kirish",
     subtitle_ru: "Мгновенный доступ",

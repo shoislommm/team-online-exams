@@ -25,7 +25,7 @@ export function nodeListEach<T>(nl: ArrayLike<T>, fn: (x: T, i: number) => void)
 }
 
 export function isExamDate(ds: string): boolean {
-  if (ds === 'TEST') return true;
+  if (ds === 'NOW') return true;
   for (let i = 0; i < EXAM_DATES.length; i++) if (EXAM_DATES[i].date === ds) return true;
   return false;
 }
