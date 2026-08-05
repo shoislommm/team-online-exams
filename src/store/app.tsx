@@ -223,18 +223,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const pageRef = useRef<PageId>(page);
   pageRef.current = page;
 
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      window.parent.postMessage(
-        {
-          type: "iframe-height",
-          height: document.documentElement.offsetHeight,
-        },
-        "*",
-      );
-    });
-  }, [page]);
-
   /* ================ toast / confirm ================ */
   function showToast(message: string, type: ToastType = "info"): void {
     toastIdRef.current += 1;
@@ -387,18 +375,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
     showPage("exam-interface");
     setExamRunning(true);
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        window.parent.postMessage(
-          {
-            type: "iframe-height",
-            height: document.documentElement.offsetHeight,
-          },
-          "*",
-        );
-      });
-    });
-  }
+  //   requestAnimationFrame(() => {
+  //     requestAnimationFrame(() => {
+  //       window.parent.postMessage(
+  //         {
+  //           type: "iframe-height",
+  //           height: document.documentElement.offsetHeight,
+  //         },
+  //         "*",
+  //       );
+  //     });
+  //   });
+  // }
 
   function startExam(type: string): void {
     startExamNow(type);
