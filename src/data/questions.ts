@@ -413,7 +413,7 @@ export const englishSections: Section[] = [
       {
         num: 27,
         text: "The housing market crash in the United States resulted in the loss of billions of dollars.",
-        correct: "true",
+        correct: "notgiven",
       },
       {
         num: 28,
