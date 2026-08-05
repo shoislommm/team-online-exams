@@ -375,18 +375,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
     showPage("exam-interface");
     setExamRunning(true);
 
-  //   requestAnimationFrame(() => {
-  //     requestAnimationFrame(() => {
-  //       window.parent.postMessage(
-  //         {
-  //           type: "iframe-height",
-  //           height: document.documentElement.offsetHeight,
-  //         },
-  //         "*",
-  //       );
-  //     });
-  //   });
-  // }
+    // requestAnimationFrame(() => {
+    //   requestAnimationFrame(() => {
+    //     window.parent.postMessage(
+    //       {
+    //         type: "iframe-height",
+    //         height: document.documentElement.offsetHeight,
+    //       },
+    //       "*",
+    //     );
+    //   });
+    // });
+  }
 
   function startExam(type: string): void {
     startExamNow(type);
